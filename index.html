@@ -1,0 +1,1970 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connect Bridge Business - Conectamos sua PME com grandes empresas para você crescer sem empréstimo, sem juros, sem dívida!">
+    <meta name="keywords" content="parceria empresarial, crescimento sem dívida, PME, pequenas empresas, parcerias estratégicas">
+    <meta name="author" content="Connect Bridge Business">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://connectbridge.com.br/">
+    <meta property="og:title" content="Connect Bridge - Cresça Sem Empréstimo, Sem Dívida">
+    <meta property="og:description" content="Conectamos sua empresa com grandes parceiros para você crescer sem juros!">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://connectbridge.com.br/">
+    <meta property="twitter:title" content="Connect Bridge - Cresça Sem Empréstimo, Sem Dívida">
+    <meta property="twitter:description" content="Conectamos sua empresa com grandes parceiros para você crescer sem juros!">
+    
+    <title>Connect Bridge Business - Cresça Sem Empréstimo, Sem Dívida</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌉</text></svg>">
+    
+    <style>
+        /* RESET E VARIÁVEIS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --accent-color: #f093fb;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --bg-light: #f7fafc;
+            --white: #ffffff;
+            --success: #48bb78;
+            --warning: #ed8936;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* UTILITÁRIOS */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 25px rgba(102, 126, 234, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-large {
+            padding: 18px 45px;
+            font-size: 1.1rem;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .mobile-menu {
+            display: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 150px 0 100px;
+            margin-top: 70px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            line-height: 1.2;
+            animation: fadeInDown 1s;
+        }
+
+        .hero .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeIn 1.5s;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+            animation: fadeInUp 2s;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .hero-stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* SEÇÕES */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* PROBLEMA */
+        .problema {
+            background: var(--bg-light);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* COMO FUNCIONA */
+        .como-funciona {
+            background: white;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step::after {
+            content: '→';
+            position: absolute;
+            right: -1.5rem;
+            top: 30px;
+            font-size: 2rem;
+            color: var(--primary-color);
+            opacity: 0.3;
+        }
+
+        .step:last-child::after {
+            display: none;
+        }
+
+        .step-number {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .step h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .step p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .step small {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* SOLUÇÃO */
+        .solucao {
+            background: var(--bg-light);
+        }
+
+        /* CASES */
+        .cases {
+            background: white;
+        }
+
+        .case {
+            background: var(--bg-light);
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .case:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .case-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .case-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            flex-shrink: 0;
+        }
+
+        .case-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-info p {
+            opacity: 0.9;
+        }
+
+        .stars {
+            color: #ffd700;
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .case-body {
+            padding: 2rem;
+        }
+
+        .case-quote {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .case-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .case-before, .case-after {
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .case-before {
+            background: #fee;
+            border-left: 4px solid #e53e3e;
+        }
+
+        .case-after {
+            background: #e6fffa;
+            border-left: 4px solid var(--success);
+        }
+
+        .case-before h4, .case-after h4 {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .case-list {
+            list-style: none;
+        }
+
+        .case-list li {
+            padding: 0.3rem 0;
+            display: flex;
+            align-items: start;
+            gap: 0.5rem;
+        }
+
+        .case-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .case-ganhou {
+            background: #fefcbf;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--warning);
+        }
+
+        .case-ganhou h4 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        /* NÚMEROS */
+        .numeros {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .numeros .section-title,
+        .numeros .section-subtitle {
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        /* PLANOS */
+        .planos {
+            background: var(--bg-light);
+        }
+
+        .planos-toggle {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .planos-toggle button {
+            background: white;
+            border: 2px solid var(--primary-color);
+            padding: 10px 30px;
+            margin: 0 10px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .planos-toggle button.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .planos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .plano {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .plano:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .plano.destaque {
+            border: 3px solid var(--primary-color);
+        }
+
+        .plano-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .plano-nome {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .plano-preco {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .plano-preco small {
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+
+        .plano-descricao {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .plano-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .plano-features li {
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: start;
+            gap: 0.75rem;
+        }
+
+        .plano-features li::before {
+            content: '✓';
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .plano-features li.disabled {
+            opacity: 0.4;
+        }
+
+        .plano-features li.disabled::before {
+            content: '✗';
+            color: #e53e3e;
+        }
+
+        /* FAQ */
+        .faq {
+            background: white;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-light);
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: all 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #edf2f7;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-question.active::after {
+            content: '−';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* CONTATO */
+        .contato {
+            background: var(--bg-light);
+        }
+
+        .contato-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contato-info {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .contato-item {
+            display: flex;
+            align-items: start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contato-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            background: var(--bg-light);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .contato-details h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .contato-details p {
+            color: var(--text-light);
+        }
+
+        .contato-details a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contato-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1a202c;
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-section p {
+            color: #cbd5e0;
+            line-height: 1.8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: #cbd5e0;
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 0;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: #cbd5e0;
+        }
+
+        /* WHATSAPP FLUTUANTE */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 35px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        /* ANIMAÇÕES */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: var(--primary-color);
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .contato-grid,
+            .case-comparison {
+                grid-template-columns: 1fr;
+            }
+
+            .case-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .step::after {
+                display: none;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 28px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        /* LOADING */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* ALERT */
+        .alert {
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .alert.success {
+            background: #e6fffa;
+            color: #047857;
+            border-left: 4px solid var(--success);
+        }
+
+        .alert.error {
+            background: #fee;
+            color: #991b1b;
+            border-left: 4px solid #e53e3e;
+        }
+
+        .alert.show {
+            display: block;
+            animation: fadeInDown 0.5s;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                🌉 Connect Bridge
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#como-funciona">Como Funciona</a></li>
+                <li><a href="#cases">Cases</a></li>
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="mobile-menu">☰</div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Cresça Sem Empréstimo.<br>Cresça Sem Dívida.</h1>
+            <p class="subtitle">
+                Conectamos sua empresa com grandes parceiros para você receber<br>
+                equipamentos, espaço, treinamentos e muito mais - SEM JUROS!
+            </p>
+            <div class="hero-buttons">
+                <a href="#contato" class="btn btn-primary btn-large">Quero Crescer Agora</a>
+                <a href="#como-funciona" class="btn btn-secondary btn-large">Saiba Como Funciona</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-number">150+</span>
+                    <span class="hero-stat-label">Parcerias Fechadas</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">R$ 85 MI</span>
+                    <span class="hero-stat-label">Em Recursos Entregues</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">500+</span>
+                    <span class="hero-stat-label">Empregos Gerados</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">93%</span>
+                    <span class="hero-stat-label">Taxa de Sucesso</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEMA -->
+    <section class="problema">
+        <div class="container">
+            <h2 class="section-title">Por Que Empresas Param de Crescer?</h2>
+            <p class="section-subtitle">
+                A maioria dos empreendedores enfrenta as mesmas barreiras para crescer
+            </p>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon">💰</div>
+                    <h3>Falta Dinheiro</h3>
+                    <p>87% das PMEs no Brasil têm dificuldade de conseguir crédito bancário tradicional</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏦</div>
+                    <h3>Juros Altíssimos</h3>
+                    <p>Empréstimos com juros de até 15% ao mês matam seu lucro e inviabilizam o crescimento</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">😰</div>
+                    <h3>Sem Garantias</h3>
+                    <p>Bancos exigem garantias impossíveis que pequenas empresas não conseguem oferecer</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <h3 style="font-size: 1.5rem; color: var(--primary-color);">
+                    E se existisse um jeito DIFERENTE de crescer?
+                </h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUÇÃO -->
+    <section class="solucao">
+        <div class="container">
+            <h2 class="section-title">A Solução: Parcerias Estratégicas</h2>
+            <p class="section-subtitle">
+                Ao invés de pedir DINHEIRO emprestado, você recebe RECURSOS de verdade!
+            </p>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon">🏢</div>
+                    <h3>Espaço Físico</h3>
+                    <p>Sala comercial, loja em shopping, galpão... Empresas grandes têm espaços ociosos que você pode usar!</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💻</div>
+                    <h3>Equipamentos</h3>
+                    <p>Computadores, máquinas, ferramentas, móveis... Tudo que você precisa para operar melhor!</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎓</div>
+                    <h3>Treinamentos</h3>
+                    <p>Cursos profissionais para você e sua equipe nas universidades corporativas das grandes empresas!</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Sistemas</h3>
+                    <p>ERP, CRM, software de gestão... Sistemas caros que você usa de graça como parceiro!</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">👨‍💼</div>
+                    <h3>Mentoria</h3>
+                    <p>Executivos experientes te orientando, compartilhando conhecimento valioso!</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🤝</div>
+                    <h3>Parceria Real</h3>
+                    <p>Relacionamento de longo prazo, crescimento conjunto, todos ganham!</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="font-size: 1.3rem; font-weight: 600; color: var(--primary-color); margin-bottom: 1.5rem;">
+                    TUDO SEM PAGAR JUROS! TUDO SEM FAZER DÍVIDA!
+                </p>
+                <a href="#contato" class="btn btn-primary btn-large">Quero Saber Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="como-funciona" id="como-funciona">
+        <div class="container">
+            <h2 class="section-title">Como Funciona na Prática</h2>
+            <p class="section-subtitle">
+                Do cadastro até receber os recursos, veja como é simples!
+            </p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Cadastro Grátis</h3>
+                    <p>Você se cadastra gratuitamente e conta sobre sua empresa</p>
+                    <small>⏱️ 30 minutos</small>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Análise</h3>
+                    <p>Analisamos seu perfil, potencial e necessidades</p>
+                    <small>⏱️ 5-7 dias</small>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Match</h3>
+                    <p>Procuramos a empresa grande perfeita para você</p>
+                    <small>⏱️ 1-2 semanas</small>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Apresentação</h3>
+                    <p>Você conhece a empresa grande em reunião</p>
+                    <small>⏱️ 1 semana</small>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Contrato</h3>
+                    <p>Fazemos contrato seguro protegendo todos</p>
+                    <small>⏱️ 2-3 semanas</small>
+                </div>
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <h3>Crescimento!</h3>
+                    <p>Você recebe recursos e sua empresa DECOLA!</p>
+                    <small>✨ Para sempre</small>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
+                    <strong>TEMPO TOTAL: 1 a 3 MESES do cadastro até receber os recursos</strong>
+                </p>
+                <a href="#contato" class="btn btn-primary btn-large">Começar Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASES (mantém os 3 cases completos do código anterior) -->
+    <section class="cases" id="cases">
+        <div class="container">
+            <h2 class="section-title">Histórias Reais de Sucesso</h2>
+            <p class="section-subtitle">
+                Veja como outras empresas transformaram seus negócios sem pegar empréstimo
+            </p>
+
+            <!-- CASE 1: JOÃO DA PADARIA -->
+            <div class="case">
+                <div class="case-header">
+                    <div class="case-avatar">🍞</div>
+                    <div class="case-info">
+                        <h3>João Silva - Padaria Pão Nosso</h3>
+                        <p>Campinas/SP • Setor: Alimentação</p>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                <div class="case-body">
+                    <p class="case-quote">
+                        "De R$ 15 mil para R$ 95 mil por mês, sem pegar 1 real emprestado!"
+                    </p>
+                    
+                    <div class="case-comparison">
+                        <div class="case-before">
+                            <h4>😔 ANTES</h4>
+                            <ul class="case-list">
+                                <li>Padaria pequena (20m²)</li>
+                                <li>Apenas 2 funcionários</li>
+                                <li>Equipamentos antigos</li>
+                                <li>Faturamento: R$ 15.000/mês</li>
+                                <li>Sem processos definidos</li>
+                            </ul>
+                        </div>
+                        <div class="case-after">
+                            <h4>😃 DEPOIS</h4>
+                            <ul class="case-list">
+                                <li>Espaço moderno (80m²)</li>
+                                <li>10 funcionários treinados</li>
+                                <li>Equipamentos profissionais</li>
+                                <li>Faturamento: R$ 95.000/mês</li>
+                                <li>Gestão profissionalizada</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="case-ganhou">
+                        <h4>🎁 O QUE GANHOU NA PARCERIA:</h4>
+                        <ul class="case-list">
+                            <li><strong>Espaço de 80m²</strong> cedido por rede de supermercados (economia de R$ 6.000/mês)</li>
+                            <li><strong>Fornos profissionais</strong> e equipamentos (valor: R$ 120.000 em comodato)</li>
+                            <li><strong>Sistema ERP</strong> de gestão completo (R$ 2.500/mês economizados)</li>
+                            <li><strong>Treinamento</strong> para toda equipe na universidade corporativa do parceiro</li>
+                            <li><strong>Mentoria mensal</strong> com gerente de expansão</li>
+                            <li><strong>Matéria-prima</strong> com 20% de desconto</li>
+                        </ul>
+                    </div>
+
+                    <p style="color: var(--text-light); margin-top: 1rem;">
+                        <strong>Resultado:</strong> Crescimento de 533% em 24 meses | 8 novos empregos criados | Zero dívidas
+                    </p>
+                </div>
+            </div>
+
+            <!-- CASE 2: MARIA DA BOUTIQUE -->
+            <div class="case">
+                <div class="case-header">
+                    <div class="case-avatar">👗</div>
+                    <div class="case-info">
+                        <h3>Maria Santos - Boutique Encanto</h3>
+                        <p>Porto Alegre/RS • Setor: Moda</p>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                <div class="case-body">
+                    <p class="case-quote">
+                        "Abri loja em shopping de luxo sem gastar nada de aluguel!"
+                    </p>
+                    
+                    <div class="case-comparison">
+                        <div class="case-before">
+                            <h4>😔 ANTES</h4>
+                            <ul class="case-list">
+                                <li>Vendia apenas em casa</li>
+                                <li>Trabalhava sozinha</li>
+                                <li>Controle em cadernos</li>
+                                <li>Faturamento: R$ 8.000/mês</li>
+                                <li>Sem loja física</li>
+                            </ul>
+                        </div>
+                        <div class="case-after">
+                            <h4>😃 DEPOIS</h4>
+                            <ul class="case-list">
+                                <li>Loja em shopping (45m²)</li>
+                                <li>6 funcionárias</li>
+                                <li>Sistema completo de gestão</li>
+                                <li>Faturamento: R$ 45.000/mês</li>
+                                <li>Abrindo 2ª loja!</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="case-ganhou">
+                        <h4>🎁 O QUE GANHOU NA PARCERIA:</h4>
+                        <ul class="case-list">
+                            <li><strong>Ponto comercial</strong> em shopping de luxo (economia de R$ 8.000/mês)</li>
+                            <li><strong>Mobiliário completo</strong> para loja (valor: R$ 65.000)</li>
+                            <li><strong>Sistema de vendas e estoque</strong> profissional</li>
+                            <li><strong>Treinamento</strong> em vendas e atendimento de excelência</li>
+                            <li><strong>Consultoria de visual merchandising</strong> trimestral</li>
+                        </ul>
+                    </div>
+
+                    <p style="color: var(--text-light); margin-top: 1rem;">
+                        <strong>Resultado:</strong> Crescimento de 462% em 18 meses | 6 empregos criados | Expandindo para 2ª loja
+                    </p>
+                </div>
+            </div>
+
+            <!-- CASE 3: CARLOS DA OFICINA -->
+            <div class="case">
+                <div class="case-header">
+                    <div class="case-avatar">🔧</div>
+                    <div class="case-info">
+                        <h3>Carlos Oliveira - Auto Mecânica Silva</h3>
+                        <p>São Paulo/SP • Setor: Automotivo</p>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                <div class="case-body">
+                    <p class="case-quote">
+                        "De fundo de quintal para oficina referência credenciada!"
+                    </p>
+                    
+                    <div class="case-comparison">
+                        <div class="case-before">
+                            <h4>😔 ANTES</h4>
+                            <ul class="case-list">
+                                <li>Oficina de fundo de quintal</li>
+                                <li>Apenas 2 mecânicos</li>
+                                <li>Ferramentas básicas</li>
+                                <li>Faturamento: R$ 12.000/mês</li>
+                                <li>Trabalhos simples</li>
+                            </ul>
+                        </div>
+                        <div class="case-after">
+                            <h4>😃 DEPOIS</h4>
+                            <ul class="case-list">
+                                <li>Galpão profissional (150m²)</li>
+                                <li>12 funcionários certificados</li>
+                                <li>Equipamentos de ponta</li>
+                                <li>Faturamento: R$ 85.000/mês</li>
+                                <li>Oficina credenciada!</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="case-ganhou">
+                        <h4>🎁 O QUE GANHOU NA PARCERIA:</h4>
+                        <ul class="case-list">
+                            <li><strong>Galpão equipado</strong> de 150m² (economia de R$ 7.000/mês)</li>
+                            <li><strong>Equipamentos profissionais</strong> para mecânica (valor: R$ 180.000)</li>
+                            <li><strong>Certificação oficial</strong> da montadora parceira</li>
+                            <li><strong>Treinamento técnico completo</strong> para toda equipe</li>
+                            <li><strong>Sistema de gestão</strong> de oficinas</li>
+                            <li><strong>Mentoria trimestral</strong> com diretor de rede de concessionárias</li>
+                        </ul>
+                    </div>
+
+                    <p style="color: var(--text-light); margin-top: 1rem;">
+                        <strong>Resultado:</strong> Crescimento de 608% em 24 meses | 10 novos empregos | Prêmio de Melhor Parceiro
+                    </p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#contato" class="btn btn-primary btn-large">Quero Ser o Próximo Caso de Sucesso</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NÚMEROS -->
+    <section class="numeros">
+        <div class="container">
+            <h2 class="section-title">Connect Bridge em Números</h2>
+            <p class="section-subtitle">
+                Resultados reais, mensuráveis e comprovados
+            </p>
+            <div class="stats-grid">
+                <div>
+                    <span class="stat-number">150+</span>
+                    <p class="stat-label">Parcerias Facilitadas</p>
+                </div>
+                <div>
+                    <span class="stat-number">R$ 85 MI</span>
+                    <p class="stat-label">Recursos Entregues</p>
+                </div>
+                <div>
+                    <span class="stat-number">500+</span>
+                    <p class="stat-label">Empregos Gerados</p>
+                </div>
+                <div>
+                    <span class="stat-number">93%</span>
+                    <p class="stat-label">Taxa de Sucesso</p>
+                </div>
+                <div>
+                    <span class="stat-number">87</span>
+                    <p class="stat-label">NPS (Satisfação)</p>
+                </div>
+                <div>
+                    <span class="stat-number">24</span>
+                    <p class="stat-label">Meses ROI Médio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANOS (mantém os planos completos do código anterior) -->
+    <section class="planos" id="planos">
+        <div class="container">
+            <h2 class="section-title">Planos e Investimento</h2>
+            <p class="section-subtitle">
+                Escolha o plano ideal para o porte da sua empresa
+            </p>
+
+            <div class="planos-toggle">
+                <button class="active" onclick="mostrarPlanos('pme')">Para PMEs</button>
+                <button onclick="mostrarPlanos('grande')">Para Grandes Empresas</button>
+            </div>
+
+            <!-- PLANOS PME -->
+            <div class="planos-grid" id="planos-pme">
+                <div class="plano">
+                    <h3 class="plano-nome">Básico</h3>
+                    <div class="plano-preco">
+                        R$ 500<small>/mês</small>
+                    </div>
+                    <p class="plano-descricao">Ideal para quem está começando e quer testar o modelo</p>
+                    <ul class="plano-features">
+                        <li>1 perfil empresarial ativo</li>
+                        <li>Até 2 conexões por mês</li>
+                        <li>Suporte por e-mail</li>
+                        <li>Acesso à plataforma de matching</li>
+                        <li>Relatórios básicos</li>
+                        <li class="disabled">Consultor dedicado</li>
+                        <li class="disabled">Auditorias incluídas</li>
+                        <li class="disabled">Prioridade em matches</li>
+                    </ul>
+                    <a href="#contato" class="btn btn-primary" style="width: 100%;">Começar Agora</a>
+                </div>
+
+                <div class="plano destaque">
+                    <div class="plano-badge">MAIS POPULAR</div>
+                    <h3 class="plano-nome">Profissional</h3>
+                    <div class="plano-preco">
+                        R$ 1.200<small>/mês</small>
+                    </div>
+                    <p class="plano-descricao">Para empresas que querem crescimento ativo e acompanhamento</p>
+                    <ul class="plano-features">
+                        <li>3 perfis empresariais ativos</li>
+                        <li>Até 10 conexões por mês</li>
+                        <li>Consultor dedicado</li>
+                        <li>4 horas de consultoria/mês</li>
+                        <li>1 auditoria gratuita/ano</li>
+                        <li>Relatórios mensais detalhados</li>
+                        <li>Participação em eventos</li>
+                        <li>Suporte prioritário</li>
+                    </ul>
+                    <a href="#contato" class="btn btn-primary" style="width: 100%;">Escolher Plano</a>
+                </div>
+
+                <div class="plano">
+                    <h3 class="plano-nome">Premium</h3>
+                    <div class="plano-preco">
+                        R$ 2.500<small>/mês</small>
+                    </div>
+                    <p class="plano-descricao">Solução completa para múltiplas parcerias simultâneas</p>
+                    <ul class="plano-features">
+                        <li>Perfis ilimitados</li>
+                        <li>Conexões ilimitadas</li>
+                        <li>12 horas de consultoria/mês</li>
+                        <li>2 auditorias gratuitas/ano</li>
+                        <li>Prioridade máxima em matches</li>
+                        <li>Assessoria jurídica básica</li>
+                        <li>Dashboard executivo</li>
+                        <li>Suporte 24/7</li>
+                    </ul>
+                    <a href="#contato" class="btn btn-primary" style="width: 100%;">Escolher Plano</a>
+                </div>
+            </div>
+
+            <!-- PLANOS GRANDES EMPRESAS -->
+            <div class="planos-grid" id="planos-grande" style="display: none;">
+                <div class="plano">
+                    <h3 class="plano-nome">Básico</h3>
+                    <div class="plano-preco">
+                        R$ 5.000<small>/mês</small>
+                    </div>
+                    <p class="plano-descricao">Para iniciar programa de desenvolvimento de PMEs</p>
+                    <ul class="plano-features">
+                        <li>Até 3 parcerias simultâneas</li>
+                        <li>Gestão básica de parcerias</li>
+                        <li>Relatórios trimestrais</li>
+                        <li>Due diligence das PMEs</li>
+                        <li>Suporte técnico</li>
+                        <li class="disabled">Co-branding</li>
+                        <li class="disabled">Dashboard executivo</li>
+                        <li class="disabled">Relatórios personalizados</li>
+                    </ul>
+                    <a href="#contato" class="btn btn-primary" style="width: 100%;">Solicitar Proposta</a>
+                </div>
+
+                <div class="plano destaque">
+                    <div class="plano-badge">RECOMENDADO</div>
+                    <h3 class="plano-nome">Profissional</h3>
+                    <div class="plano-preco">
+                        R$ 12.000<small>/mês</small>
+                    </div>
+                    <p class="plano-descricao">Gestão completa de programa de parcerias estratégicas</p>
+                    <ul class="plano-features">
+                        <li>Até 10 parcerias simultâneas</li>
+                        <li>Gestão completa end-to-end</li>
+                        <li>Relatórios mensais executivos</li>
+                        <li>20 horas de consultoria/mês</li>
+                        <li>Auditorias periódicas inclusas</li>
+                        <li>Co-branding em materiais</li>
+                        <li>Dashboard executivo</li>
+                        <li>Gerente de conta dedicado</li>
+                    </ul>
+                    <a href="#contato" class="btn btn-primary" style="width: 100%;">Solicitar Proposta</a>
+                </div>
+
+                <div class="plano">
+                    <h3 class="plano-nome">Premium</h3>
+                    <div class="plano-preco">
+                        R$ 25.000<small>/mês</small>
+                    </div>
+                    <p class="plano-descricao">Programa white label personalizado para sua empresa</p>
+                    <ul class="plano-features">
+                        <li>Parcerias ilimitadas</li>
+                        <li>Programa white label</li>
+                        <li>Dashboard personalizado</li>
+                        <li>Consultoria estratégica dedicada</li>
+                        <li>Relatórios semanais customizados</li>
+                        <li>Eventos exclusivos</li>
+                        <li>Inteligência de mercado</li>
+                        <li>Equipe dedicada exclusiva</li>
+                    </ul>
+                    <a href="#contato" class="btn btn-primary" style="width: 100%;">Solicitar Proposta</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: white; border-radius: 15px;">
+                <h3 style="margin-bottom: 1rem;">Comissões sobre Acordos</h3>
+                <p style="color: var(--text-light); margin-bottom: 1.5rem;">
+                    Além da mensalidade, cobramos uma comissão única sobre o valor dos recursos transferidos:
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; max-width: 800px; margin: 0 auto;">
+                    <div style="padding: 1rem; background: var(--bg-light); border-radius: 10px;">
+                        <strong>Até R$ 50mil</strong><br>
+                        <span style="color: var(--primary-color); font-size: 1.5rem;">8%</span>
+                    </div>
+                    <div style="padding: 1rem; background: var(--bg-light); border-radius: 10px;">
+                        <strong>R$ 50-200mil</strong><br>
+                        <span style="color: var(--primary-color); font-size: 1.5rem;">6%</span>
+                    </div>
+                    <div style="padding: 1rem; background: var(--bg-light); border-radius: 10px;">
+                        <strong>R$ 200-500mil</strong><br>
+                        <span style="color: var(--primary-color); font-size: 1.5rem;">5%</span>
+                    </div>
+                    <div style="padding: 1rem; background: var(--bg-light); border-radius: 10px;">
+                        <strong>Acima R$ 500mil</strong><br>
+                        <span style="color: var(--primary-color); font-size: 1.5rem;">4%</span>
+                    </div>
+                </div>
+                <p style="color: var(--text-light); margin-top: 1.5rem; font-size: 0.9rem;">
+                    * Comissão paga apenas uma vez, quando a parceria é fechada
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ (mantém FAQ completo do código anterior) -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <p class="section-subtitle">
+                Tire todas as suas dúvidas sobre como funciona
+            </p>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        É realmente de graça? Como vocês lucram?
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Os RECURSOS (equipamentos, espaço, treinamentos) são gratuitos para você - você não paga por eles!
+                            Você paga apenas uma mensalidade pequena (R$ 500 a R$ 2.500) para a Connect Bridge fazer a intermediação,
+                            análise, matching e acompanhamento. Também cobramos uma comissão única (4-8%) quando a parceria é fechada.
+                            É MUITO mais barato que empréstimo bancário!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quanto tempo demora do cadastro até receber os recursos?
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Em média, de 1 a 3 meses. Isso inclui: análise do seu perfil (5-7 dias), busca de parceiro compatível (1-2 semanas),
+                            apresentação e reuniões (1-2 semanas), elaboração e assinatura de contrato (2-3 semanas), e finalmente
+                            o recebimento dos recursos. O tempo pode variar conforme a complexidade da parceria.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Qualquer empresa pode participar?
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Sim! Se você tem CNPJ ativo, está regularizado, tem pelo menos 1 ano de mercado e quer crescer,
+                            pode participar. Atendemos empresas de TODOS os setores: comércio, indústria, serviços, tecnologia, etc.
+                            Fazemos uma análise inicial para verificar sua viabilidade e potencial de parceria.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Funciona em todo o Brasil?
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            SIM! Atendemos empresas de TODO o Brasil. 🇧🇷 Temos parcerias facilitadas em todas as regiões.
+                            Nossa plataforma funciona 100% online, mas também fazemos reuniões presenciais quando necessário.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        É seguro? Existe contrato?
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Totalmente seguro! Todas as parcerias são formalizadas com contratos registrados em cartório,
+                            elaborados por advogados especializados. O contrato protege AMBAS as partes (você e a empresa grande),
+                            define claramente metas, prazos, recursos, direitos e deveres. A Connect Bridge acompanha tudo
+                            e atua como mediadora em caso de qualquer conflito.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Por que grandes empresas fazem isso?
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Grandes empresas ganham MUITO com isso:<br>
+                            1) <strong>Desenvolvem fornecedores</strong> confiáveis e de qualidade<br>
+                            2) <strong>Expandem territorialmente</strong> sem abrir filiais (menor custo)<br>
+                            3) <strong>Cumprem metas ESG</strong> (responsabilidade social) cada vez mais exigidas<br>
+                            4) <strong>Ganham inovação</strong> - PMEs são mais ágeis e criativas<br>
+                            5) <strong>Retorno financeiro</strong> - o parceiro cresce e compra mais delas<br>
+                            É uma estratégia de negócio inteligente, não é caridade!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO - COM SEUS DADOS REAIS -->
+    <section class="contato" id="contato">
+        <div class="container">
+            <h2 class="section-title">Pronto Para Crescer Sem Dívida?</h2>
+            <p class="section-subtitle">
+                Cadastro 100% GRATUITO • Sem Compromisso • Resposta Rápida
+            </p>
+
+            <div class="contato-grid">
+                <div class="contato-info">
+                    <h3 style="margin-bottom: 2rem; font-size: 1.5rem;">Entre em Contato</h3>
+                    
+                    <div class="contato-item">
+                        <div class="contato-icon">📱</div>
+                        <div class="contato-details">
+                            <h3>WhatsApp</h3>
+                            <p>Resposta em até 1 hora!</p>
+                            <a href="https://wa.me/5543916099222?text=Olá!%20Quero%20crescer%20sem%20dívida!" target="_blank">
+                                +55 (43) 91609-9222
+                            </a>
+                            <p style="margin-top: 0.5rem;">ou</p>
+                            <a href="https://wa.me/5543919199620?text=Olá!%20Quero%20crescer%20sem%20dívida!" target="_blank">
+                                +55 (43) 91919-9620
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contato-item">
+                        <div class="contato-icon">📧</div>
+                        <div class="contato-details">
+                            <h3>E-mail</h3>
+                            <p>Resposta em até 24 horas</p>
+                            <a href="mailto:connectbridge@outlook.com.br">
+                                connectbridge@outlook.com.br
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contato-item">
+                        <div class="contato-icon">📷</div>
+                        <div class="contato-details">
+                            <h3>Instagram</h3>
+                            <p>Siga para dicas e cases</p>
+                            <a href="https://instagram.com/connectbridge2026" target="_blank">
+                                @connectbridge2026
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contato-item">
+                        <div class="contato-icon">💼</div>
+                        <div class="contato-details">
+                            <h3>LinkedIn</h3>
+                            <p>Conecte-se profissionalmente</p>
+                            <a href="https://www.linkedin.com/in/connect-bridge-1368913b6/" target="_blank">
+                                Connect Bridge
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contato-form">
+                    <div class="alert" id="formAlert"></div>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo *</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="empresa">Nome da Empresa *</label>
+                            <input type="text" id="empresa" name="empresa" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="whatsapp">WhatsApp *</label>
+                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="(43) 91609-9222" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cidade">Cidade/Estado *</label>
+                            <input type="text" id="cidade" name="cidade" placeholder="São Paulo/SP" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tipo">Você é: *</label>
+                            <select id="tipo" name="tipo" required>
+                                <option value="">Selecione...</option>
+                                <option value="pme">Dono de empresa pequena/média (PME)</option>
+                                <option value="grande">Gestor de empresa grande</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensagem">O que sua empresa mais precisa? *</label>
+                            <textarea id="mensagem" name="mensagem" required placeholder="Ex: Equipamentos, espaço físico, treinamentos..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+                            <span id="btnText">Quero Crescer Agora</span>
+                            <span id="btnLoading" style="display: none;" class="loading"></span>
+                        </button>
+
+                        <p style="text-align: center; margin-top: 1rem; color: var(--text-light); font-size: 0.9rem;">
+                            🔒 Seus dados estão seguros conosco
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER - COM SEUS DADOS REAIS -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>🌉 Connect Bridge Business</h3>
+                    <p>
+                        Conectamos empresas, construímos futuros e transformamos sonhos em realidade.
+                        Crescimento sem dívida é possível!
+                    </p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/connectbridge2026" target="_blank" title="Instagram">📷</a>
+                        <a href="https://www.linkedin.com/in/connect-bridge-1368913b6/" target="_blank" title="LinkedIn">💼</a>
+                        <a href="https://wa.me/5543916099222" target="_blank" title="WhatsApp">💬</a>
+                        <a href="mailto:connectbridge@outlook.com.br" title="E-mail">📧</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#como-funciona">Como Funciona</a></li>
+                        <li><a href="#cases">Cases de Sucesso</a></li>
+                        <li><a href="#planos">Planos e Preços</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Para Empresas</h3>
+                    <ul class="footer-links">
+                        <li><a href="#planos">Planos para PMEs</a></li>
+                        <li><a href="#planos">Planos para Grandes</a></li>
+                        <li><a href="#cases">Cases de Sucesso</a></li>
+                        <li><a href="#contato">Cadastro Gratuito</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>
+                        📱 +55 (43) 91609-9222<br>
+                        📱 +55 (43) 91919-9620<br>
+                        📧 connectbridge@outlook.com.br<br><br>
+                        
+                        📷 @connectbridge2026<br>
+                        💼 Connect Bridge - LinkedIn
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Connect Bridge Business - Todos os direitos reservados</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">
+                    <a href="#" style="color: #cbd5e0; text-decoration: none; margin: 0 1rem;">Política de Privacidade</a>
+                    <a href="#" style="color: #cbd5e0; text-decoration: none; margin: 0 1rem;">Termos de Uso</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLUTUANTE - COM SEU NÚMERO -->
+    <a href="https://wa.me/5543916099222?text=Olá!%20Quero%20crescer%20sem%20dívida!" class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+        💬
+    </a>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // MENU MOBILE
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        });
+
+        // SMOOTH SCROLL
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Fechar menu mobile
+                    if (window.innerWidth <= 768) {
+                        document.querySelector('.nav-links').classList.remove('active');
+                    }
+                }
+            });
+        });
+
+           // FAQ ACCORDION
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const answer = this.nextElementSibling;
+            if (answer.style.maxHeight) {
+                answer.style.maxHeight = null;
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        });
+    });
+
+    // TOGGLE PLANOS
+    function mostrarPlanos(tipo) {
+        document.getElementById('planos-pme').style.display = tipo === 'pme' ? 'grid' : 'none';
+        document.getElementById('planos-grande').style.display = tipo === 'grande' ? 'grid' : 'none';
+        
+        document.querySelectorAll('.planos-toggle button').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        event.target.classList.add('active');
+    }
+
+    // FORMULÁRIO
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const btnText = document.getElementById('btnText');
+        const btnLoading = document.getElementById('btnLoading');
+        const alert = document.getElementById('formAlert');
+        
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'inline-block';
+        
+        // Coleta dados do formulário
+        const nome = document.getElementById('nome').value;
+        const empresa = document.getElementById('empresa').value;
+        const whatsapp = document.getElementById('whatsapp').value;
+        const email = document.getElementById('email').value;
+        const cidade = document.getElementById('cidade').value;
+        const tipo = document.getElementById('tipo').value;
+        const mensagem = document.getElementById('mensagem').value;
+        
+        // Monta mensagem para WhatsApp
+        const textoWhatsApp = `Olá! Sou ${nome} da empresa ${empresa}.%0A` +
+            `📍 ${cidade}%0A` +
+            `📧 ${email}%0A` +
+            `👤 Tipo: ${tipo}%0A%0A` +
+            `Necessidade: ${mensagem}`;
+        
+        setTimeout(function() {
+            btnText.style.display = 'inline';
+            btnLoading.style.display = 'none';
+            
+            alert.className = 'alert success show';
+            alert.textContent = '✅ Dados enviados! Redirecionando para WhatsApp...';
+            
+            setTimeout(function() {
+                window.open('https://wa.me/5543916099222?text=' + textoWhatsApp, '_blank');
+            }, 1500);
+            
+            document.getElementById('contactForm').reset();
+        }, 2000);
+    });
+
+    // ANIMAÇÃO AO SCROLL
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.card, .step, .plano, .case').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'all 0.6s ease';
+        observer.observe(el);
+    });
+    </script>
+</body>
+</html>
